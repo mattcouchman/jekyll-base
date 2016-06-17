@@ -1,0 +1,14 @@
+// @name Colors
+// @description Set brand colors.
+
+$brand-a:   #674172;
+$brand-b:   #ffffff;
+$brand-c:   #dddddd;
+
+$text-a:    #222222;
+$text-b:    #eeeeee;
+
+@mixin set-colors($background, $text: $text-a) {
+    background: $background;
+    color: $text;
+}

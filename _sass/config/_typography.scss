@@ -1,0 +1,10 @@
+// @name Typography
+// @description Set all typography rules and create mixins.
+
+// Import fonts
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+
+// Set mixins
+@mixin font-primary() {
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}

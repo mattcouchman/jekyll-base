@@ -1,0 +1,7 @@
+// @name Header
+// @description Contains header styles.
+
+header {
+    @include font-primary();
+    @include set-colors($brand-a, $text-b);
+}

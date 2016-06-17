@@ -1,0 +1,51 @@
+// @name Grid
+// @description Contains grid settings and creates all grid classes.
+
+// Grid settings
+$gutter-width: $spacer;
+$grid-width: 1000px;
+$grid-columns: 12;
+
+// Grid classes
+.container {
+    max-width: $grid-width;
+    margin: 0 auto;
+    padding: 0 $gutter-width;
+    box-sizing: content-box;
+}
+
+.grid {
+    @include media($medium) {
+        margin-left: -$gutter-width;
+
+        // Clear floats from grid__item's
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        &__item {
+            float: left;
+            padding-left: $gutter-width;
+
+            // Create grid columns
+            @for $i from 1 through $grid-columns {
+                $actual-width: $i / $grid-columns * 100%;
+
+                &--#{$i}-12 {
+                    width: calc(#{$actual-width} - #{$gutter-width});
+                }
+            }
+
+            // Create grid column offsets
+            @for $i from 1 through $grid-columns {
+                $actual-width: $i / $grid-columns * 100%;
+
+                &--offset-#{$i} {
+                    margin-left: calc(#{$actual-width} + #{$gutter-width / 2});
+                }
+            }
+        }
+    }
+}

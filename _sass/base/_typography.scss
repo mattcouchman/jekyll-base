@@ -1,0 +1,7 @@
+// @name Typography
+// @description Set all typography styles. Config set in config/typography.
+
+body {
+    @include font-primary();
+    font-size: 16px;
+}

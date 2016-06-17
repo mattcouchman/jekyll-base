@@ -1,0 +1,12 @@
+// @name Breakpoints
+// @description Breakpoints for alternate styles.
+
+$medium:     500px;
+$large:      860px;
+
+// Mixins
+@mixin media($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
